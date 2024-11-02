@@ -3,6 +3,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   background-color: #073e77;
   background-image: url("./images/background.jpg");
@@ -14,96 +16,69 @@ body {
 }
 
 button,label {
-  background: transparent;
   border: 0;
   padding: 0;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
+}
+button{
+  background: rgba(82, 169, 245, 0.575);
 }
 
-.sidebar {
-  position: fixed;
-  top: 24px;
-  left: 24px;
-  bottom: 44px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 260px;
-  border-radius: 16px;
-  padding-inline: 16px;
-  background: rgb(0 0 0 / 32%);
-  backdrop-filter: blur(30px);
-  transition: width 0.4s;
-}
-
-.sidebar header {
-  display: flex;
-  align-items: center;
-  height: 72px;
-  padding-top: 10px;
-  border-bottom: 1px solid rgb(255 255 255 / 8%);
-}
-
-.sidebar header img {
-  height: 44px;
-}
-
-.sidebar input {
+.content input {
   scale: 0;
   position: absolute;
 }
 
-.sidebar input#baitap:checked ~ div {
+.content input#baitap:checked ~ div {
+  height: 260px;
+}
+
+.content input#profile:checked ~ div {
   height: 100px;
 }
 
-.sidebar input#profile:checked ~ div {
-  height: 100px;
-}
-
-.sidebar :is(button, label) {
+.content :is(button, label) {
   position: relative;
   display: flex;
   gap: 16px;
   align-items: center;
-  height: 50px;
+  height: 100px;
   width: 100%;
   border-radius: 6px;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1;
   padding: 0 16px;
   color: rgb(255 255 255 / 95%);
 }
 
-.sidebar label p:nth-child(2) {
+.content label p:nth-child(2) {
   flex: 1 1 auto;
 }
 
-.sidebar input:checked ~ label {
+.content input:checked ~ label {
   background: #1960f3;
 }
 
-.sidebar label i {
+.content label i {
   transition: 0.3s;
 }
 
-.sidebar input:checked ~ label > i:nth-child(3) {
+.content input:checked ~ label > i:nth-child(3) {
   rotate: -180deg;
 }
 
-.sidebar input:not(:checked) ~ label:hover,
-.sidebar button:hover {
-  background: rgb(0 0 0 / 15%);
+.content input:not(:checked) ~ label:hover, .content button:hover {
+  background: rgba(1, 1, 113, 0.856);
 }
 
-.sidebar ul {
+.content ul {
   display: grid;
+  align-items: center;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-inline: 100px;
   width: 100%;
 }
 
@@ -122,32 +97,43 @@ button,label {
 }
 
 .sub-menu button {
-  padding-left: 52px;
+  text-align:  center;
 }
 
 .sub-menu button::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 24px;
   translate: 0 -50%;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: rgb(255 255 255 / 35%);
+  background-color: rgba(14, 105, 191, 0.35);
 }
-
-.sidebar .material-symbols-outlined {
-  font-size: 16px;
+.sub-menu button{
+  display: flex;
+  justify-content: center;
+  margin-block-start: 30px;
 }
-
-.sidebar i {
+.content i {
   font-size: 20px;
   width: 20px;
   max-width: 20px;
   min-width: 20px;
 }
-h1{
+h1, h4{
     color: white;
     text-align: center;
+}
+.content{
+  background: rgba(15, 87, 147, 0.567);
+  background-size: contain;
+  height: 80vh;
+  background-position:center ;
+  margin-inline: 50px;
+  display: grid;
+  flex-direction: column;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: width 0.4s;
 }
