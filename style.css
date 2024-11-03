@@ -95,13 +95,8 @@ button{
   left: 0;
   display: grid;
 }
-
-.sub-menu button {
-  text-align:  center;
-}
-
+.sub-menu a{text-decoration: none;}
 .sub-menu button::before {
-  content: "";
   position: absolute;
   top: 50%;
   translate: 0 -50%;
@@ -111,6 +106,7 @@ button{
   background-color: rgba(14, 105, 191, 0.35);
 }
 .sub-menu button{
+  text-align: center;
   display: flex;
   justify-content: center;
   margin-block-start: 30px;
