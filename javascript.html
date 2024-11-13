@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+      body{
+        background-image: url(./images/bg.svg);
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: 30%;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript</h1>
+    </header>
+    <main>
+        <section class="container">
+            <h2>Tính Giai Thừa</h2>
+            <form onsubmit="tinhtoanGiaiThua(event)">
+                <label for="number">Nhập số nguyên không âm:</label>
+                <input type="number" id="number" required>
+                <button type="submit">Tính Giai Thừa</button>
+            </form>
+            <section id="result1"></section>
+        </section>
+
+        <section class="container">
+            <h2>Tính Lũy Thừa</h2>
+            <form onsubmit="tinhtoanLuyThua(event)">
+                <div class="col">
+                    <div class="element">
+                    <label for="base">Nhập cơ số:</label>
+                    <input type="number" id="base" step="any" required></div>
+                    <div class="element">
+                    <label for="exponent">Nhập số mũ:</label>
+                    <input type="number" id="exponent" required></div>
+                </div>
+                <button type="submit">Tính Lũy Thừa</button>
+            </form>
+            <section id ="result2"></section>
+        </section>
+    </main>
+    <footer><h4><a href="index.html" style="text-decoration: none; "> Về trang chủ</a></h4></footer>
+</body>
+</html>
